@@ -11,7 +11,7 @@ export default function Home() {
   const [AllJobs, setAllJobs] = useState([]);
 
   const getAllJob = async () => {
-    let res = await axios.get('http://localhost:8090/job/getAll')
+    let res = await axios.get('https://job-portal-backend-1-wd2i.onrender.com/job/getAll')
     setAllJobs(res.data.jobs)
   }
   useEffect(() => {

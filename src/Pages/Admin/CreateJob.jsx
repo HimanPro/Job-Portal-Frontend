@@ -55,7 +55,7 @@ const CreateJob = () => {
     e.preventDefault();
     console.log("Submitted Data:", formData);
     console.log(storeData);
-    let res = await axios.post(`http://localhost:8090/job/create`, formData, {
+    let res = await axios.post(`https://job-portal-backend-1-wd2i.onrender.com/job/create`, formData, {
       headers:{
         'Authorization':storeData.token
       }

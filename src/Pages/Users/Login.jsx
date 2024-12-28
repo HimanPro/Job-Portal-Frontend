@@ -20,7 +20,7 @@ const Login = () => {
       password: passwordRef.current.value
     }
     try {
-      let res = await axios.post('http://localhost:8090/user/login', obj)
+      let res = await axios.post('https://job-portal-backend-1-wd2i.onrender.com/user/login', obj)
       console.log(res);
       if (res.data.success) {
         localStorage.setItem('JobPortal', JSON.stringify({ token:res.data.token, role:res.data.role, login:true }))

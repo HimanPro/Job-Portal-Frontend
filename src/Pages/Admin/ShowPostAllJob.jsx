@@ -27,7 +27,7 @@ const ShowPostAllJob = () => {
 
   const showJob = async () => {
     let token = storeData.token
-    let res = await axios.get('http://localhost:8090/job/getOwnJob', {
+    let res = await axios.get('https://job-portal-backend-1-wd2i.onrender.com/job/getOwnJob', {
       headers: {
         'Authorization': token
       }
@@ -42,7 +42,7 @@ console.log(date);
 
   const HandelDelete = async (_id) => {
     let token = storeData.token
-    let res = await axios.delete(`http://localhost:8090/job/delete/${_id}`, {
+    let res = await axios.delete(`https://job-portal-backend-1-wd2i.onrender.com/job/delete/${_id}`, {
       headers: {
         'Authorization': token
       }

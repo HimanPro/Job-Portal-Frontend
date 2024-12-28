@@ -27,7 +27,7 @@ let storData = useSelector((state)=>state.user)
 
   const handleSubmit = async(e) => {
     e.preventDefault()
-    let res = await axios.put(`http://localhost:8090/job/update/${jobdata._id}`, jobdata, {
+    let res = await axios.put(`https://job-portal-backend-1-wd2i.onrender.com/job/update/${jobdata._id}`, jobdata, {
       headers:{
         'Authorization': storData.token
       }

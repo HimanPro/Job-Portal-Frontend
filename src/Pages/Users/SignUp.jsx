@@ -23,7 +23,7 @@ export default function SignUp() {
     }
 
     try {
-      let res = await axios.post('http://localhost:8090/user/create', obj)
+      let res = await axios.post('https://job-portal-backend-1-wd2i.onrender.com/user/create', obj)
       if(res.data.success){
         toast.success(res.data.msg, {position:'top-center'})
         navigate('/login')

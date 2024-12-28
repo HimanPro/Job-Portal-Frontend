@@ -33,7 +33,7 @@ console.log(formData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await axios.post('http://localhost:8090/applicants/apply', formData, {
+    let res = await axios.post('https://job-portal-backend-1-wd2i.onrender.com/applicants/apply', formData, {
       headers:{
         'Authorization': storData.token
       }
