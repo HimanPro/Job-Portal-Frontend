@@ -1,0 +1,19 @@
+
+
+body {
+    font-family: Poppins, sans-serif;
+  }
+  .loginbackground{
+    background-image: url('./Pages/Users/background.png');
+    background-size:cover;
+    background-position: center;
+
+  }
+  /* .bgClass{
+    background-image: url('./Pages/Admin/Bottom_hero_image.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px;
+    background-size: cover;
+    opacity:blur;
+  } */
