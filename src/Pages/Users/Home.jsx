@@ -19,16 +19,6 @@ export default function Home() {
   }, [])
 
 
-  const [ActiveTabIndex, setActiveTabIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState("All Recent");
-
-  const TabList = [
-    "All Recent",
-    // "Finance",
-    // "Development",
-    // "Marketing",
-    // "Specialist",
-  ];
 
   function handleTabClick(index) {
     setActiveTabIndex(index);
