@@ -41,7 +41,6 @@ console.log(formData);
     let data = res.data
     if(data.success){
       model(false)
-      set_AllJob()
       toast.success(data.msg, {position:'top-right'})
     }
     else{

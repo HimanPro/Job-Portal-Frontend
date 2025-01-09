@@ -298,7 +298,7 @@ export default function Home() {
                       </div> */}
         </Modal>
         <Modal title="Job Form" open={isFormModalOpen} className='top-2' cancelButtonProps={{ style: { display: 'none' } }} okButtonProps={{ style: { display: 'none' } }} onCancel={handleCancel}>
-          <JobApplicationForm Job_Id={Job_Id} set_AllJob = {AllJobs} model={setIsFormModalOpen} />
+          <JobApplicationForm Job_Id={Job_Id} set_AllJob = {getAllJob} model={setIsFormModalOpen} />
         </Modal>
 
       </div>
