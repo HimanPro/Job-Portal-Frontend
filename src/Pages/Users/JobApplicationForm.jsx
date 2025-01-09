@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
-const JobApplicationForm = ({Job_Id, model}) => {
+const JobApplicationForm = ({Job_Id, model, set_AllJob}) => {
     let storData = useSelector((state)=>state.user)
   const [formData, setFormData] = useState({
     name: "",
@@ -41,6 +41,7 @@ console.log(formData);
     let data = res.data
     if(data.success){
       model(false)
+      set_AllJob()
       toast.success(data.msg, {position:'top-right'})
     }
     else{

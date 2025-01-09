@@ -20,10 +20,10 @@ export default function Home() {
 
 
 
-  function handleTabClick(index) {
-    setActiveTabIndex(index);
-    setActiveTab(TabList[index]);
-  }
+  // function handleTabClick(index) {
+  //   setActiveTabIndex(index);
+  //   setActiveTab(TabList[index]);
+  // }
 
   const [ViewJob, setViewJob] = useState({
     title: "",
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center">
-            <div className="text-center pt-8 flex sm:justify-center gap-5 md:gap-[74px] overflow-x-auto  whitespace-nowrap scrollbar-thin">
+            {/* <div className="text-center pt-8 flex sm:justify-center gap-5 md:gap-[74px] overflow-x-auto  whitespace-nowrap scrollbar-thin">
               {TabList.map((tabName, index) => (
                 <div key={index} onClick={() => handleTabClick(index)}>
                   <p
@@ -94,22 +94,22 @@ export default function Home() {
                   ></div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           {/* <div className='flex gap-4 flex-col lg:flex-row mx-auto mt-8 md:flex-col sm:flex-col'>
             <input type="text" className='w-[180px] bg-slate-700 text-white p-2 border-2 rounded-md' placeholder='Enter your title'/>
             <input type="text" className='w-[180px] bg-slate-700 text-white p-2 border-2  rounded-md' placeholder='location'/>
             <button className='w-[180px] px-6 bg-green-700 border-2 rounded-lg'>Search</button>
           </div> */}
-          <div className="flex max-w-xs w-full gap-2">
+          {/* <div className="flex max-w-xs w-full gap-2">
             <input type="text" placeholder="Search something..." className=" bg-gray-100 px-4 py-2 rounded-xl outline outline-transparent border focus-within:border-blue-600 focus-within:bg-transparent transition-all" />
             <input type="text" placeholder="Search something..." className=" bg-gray-100 px-4 py-2 rounded-xl outline outline-transparent border focus-within:border-blue-600 focus-within:bg-transparent transition-all" />
             <button></button>
-          </div>
+          </div> */}
 
 
           <div className='flex'>
-            <div className="flex flex-wrap justify-center gap-4 mt-4">
+            <div className="flex flex-wrap justify-evenly gap-4 mt-4">
               {AllJobs.map((ele, i) => {
 
                 let lastDate = new Date(ele.lastDate).toLocaleDateString('en-IN', { year: 'numeric', month: 'numeric', day: 'numeric' })
@@ -298,7 +298,7 @@ export default function Home() {
                       </div> */}
         </Modal>
         <Modal title="Job Form" open={isFormModalOpen} className='top-2' cancelButtonProps={{ style: { display: 'none' } }} okButtonProps={{ style: { display: 'none' } }} onCancel={handleCancel}>
-          <JobApplicationForm Job_Id={Job_Id} model={setIsFormModalOpen} />
+          <JobApplicationForm Job_Id={Job_Id} set_AllJob = {AllJobs} model={setIsFormModalOpen} />
         </Modal>
 
       </div>
