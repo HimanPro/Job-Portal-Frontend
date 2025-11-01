@@ -30,7 +30,7 @@ function App() {
     <Routes>
       <Route path='/landing' element={login === false ? <Landing/> : role === 'Student' ? <Navigate to='/'/>:<Navigate to='/empHome'/>}/>
       
-      <Route path='/' element={login === true && role === 'Student' ? <Home/> : <Navigate to='/landing'/>}/>
+      <Route path='/' element={<Landing/> }/>
       
       <Route path='/login' element={login === false ? <Login/> : role === 'Student' ? <Navigate to='/'/>:<Navigate to='/empHome'/>}/>
       
